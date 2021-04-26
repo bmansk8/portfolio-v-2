@@ -1,0 +1,23 @@
+{
+  "name": "portfolio-v-2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "author": "barron v brock",
+  "license": "ISC",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.3",
+    "alpinejs": "^2.8.2",
+    "express": "^4.17.1",
+    "halfmoon": "^1.1.1"
+  },
+  "devDependencies": {
+    "prettier": "^2.2.1",
+    "nodemon": "^2.0.7"
+  }
+}

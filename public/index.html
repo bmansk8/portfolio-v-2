@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- SEO -->
+        <title>Barron V Brock</title>
+        <meta name="robots" content="index, follow" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#000000" />
+        <meta
+            name="keywords"
+            content="Barron Brock, Barron V Brock, Barron Mills Von Brock, Barron Brock portfolio"
+        />
+        <meta name="description" content="Portfolio Website" />
+        <meta name="author" content="Barron V Brock" />
+        <meta
+            name="Barron V Brock Portfolio"
+            content="Barron V Brock's portoflio"
+        />
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+        <link href="css/halfmoon.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="/css/all.css" />
+        <!-- fontawesome -->
+
+        <!--favicon-->
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="favicon/apple-touch-icon.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="favicon/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="favicon/favicon-16x16.png"
+        />
+        <link rel="manifest" href="favicon/site.webmanifest" />
+    </head>
+
+    <body data-set-preferred-mode-onload="true">
+        <!-- Page wrapper -->
+        <div class="page-wrapper with-navbar">
+            <!-- navbar -->
+            <nav class="navbar justify-content-center">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a
+                            
+                            data-toggle="tooltip"
+                            data-title="FreeCodeCamp"
+                            data-placement="bottom"
+                            class="nav-link"
+                            href="https://www.freecodecamp.org/bmansk8"
+                            ><i class="fab fa-free-code-camp"></i
+                        ></a>
+                    </li>
+                    <li class="nav-item">
+                        <a
+                            data-toggle="tooltip"
+                            data-title="Codepen"
+                            data-placement="bottom"
+                            class="nav-link"
+                            href="https://codepen.io/bmansk14"
+                            ><i class="fab fa-codepen"></i
+                        ></a>
+                    </li>
+                    <li class="nav-item">
+                        <a
+                            data-toggle="tooltip"
+                            data-title="LinkedIn"
+                            data-placement="bottom"
+                            class="nav-link"
+                            href="https://www.linkedin.com/in/barron-v-brock/"
+                            ><i class="fab fa-linkedin"></i
+                        ></a>
+                    </li>
+                    <li class="nav-item">
+                        <a
+                            data-toggle="tooltip"
+                            data-title="Github"
+                            data-placement="bottom"
+                            class="nav-link"
+                            href="https://github.com/bmansk8"
+                            ><i class="fab fa-github"></i
+                        ></a>
+                    </li>
+                    <li class="nav-item">
+                        <a
+                            data-toggle="tooltip"
+                            data-title="Blog"
+                            data-placement="bottom"
+                            class="nav-link"
+                            href="https://barron-blog.vercel.app"
+                            ><i class="fas fa-pen"></i
+                        ></a>
+                    </li>
+                    <li class="nav-item dropdown with-arrow">
+                        <a
+                            class="nav-link"
+                            data-toggle="dropdown"
+                            id="nav-link-dropdown-toggle"
+                        >
+                            Contact
+                            <i
+                                class="fa fa-angle-down ml-5"
+                                aria-hidden="true"
+                            ></i>
+                            <!-- ml-5= margin-left: 0.5rem (5px) -->
+                        </a>
+
+                        <div
+                            class="dropdown-menu dropdown-menu-right"
+                            aria-labelledby="nav-link-dropdown-toggle"
+                        >
+                            <p>
+                                <i class="fas fa-envelope"></i
+                                >bmansk14@gmail.com
+                            </p>
+                            <p><i class="fas fa-phone"></i>678-704-7626</p>
+                        </div>
+                    </li>
+                </ul>
+                <button class="btn" type="button" aria-label="toggel dark mode" onclick="toggle()">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </nav>
+            <!-- Content wrapper -->
+            <div class="content-wrapper">
+                <!-- Hero Card -->
+                <div
+                    class="content text-center"
+                    style="width: 60vw; margin: auto"
+                >
+                    <h1>Barron V Brock</h1>
+                    <img
+                        id="headerImg"
+                        src="/photos/BarronBrock.jpg"
+                        class="img-fluid rounded-top"
+                        alt="Picture of Barron M V Brock"
+                        style="width: 30em"
+                    />
+                    <p>
+                        I'm a junior level full stack web developer. I'm most
+                        comfortable in React and the AWS cloud. Learning new
+                        tools and languages from doc pages and online courses is
+                        one of my strengths. I recently have been working a lot
+                        with Next.js. I'm laid back and easily self motivated.
+                        I’m a musician and that is my main creative outlet. Also
+                        writing, journaling, basketball, and running are some of
+                        my main hobbies. Coding is my passion and I can’t wait
+                        to land my first position.
+                    </p>
+                </div>
+
+                <!-- projects -->
+                <div class="content" x-data="{ open: false}">
+                    <h2 class="content-title">
+                        Projects
+                        <button class="btn" type="button" aria-label="projects" @click="open = true">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </h2>
+                    <!-- transitions using alpine's defaults. These can be much more configurable but this suits my needs -->
+                    <div
+                        x-show.transition.duration.700ms.scale.0="open"
+                        @click.away="open = false"
+                    >
+                        <div class="card">
+                            <h2 class="card-title">Quote machine</h2>
+                            <p class="text-muted">
+                                Developed a react quote machine that has a
+                                navbar, api calls, and protected routes. It uses
+                                async await, api calls, and react hooks.
+                                Utilized: react, react router, heroku, and
+                                bootstrap
+                            </p>
+                            <div class="text-right">
+                                <!-- text-right = text-align: right -->
+                                <a
+                                    href="https://reactquote-machine.herokuapp.com/"
+                                    class="btn"
+                                    >See it in action!</a
+                                >
+                                <a
+                                    href="https://github.com/bmansk8/testing-with-jest"
+                                    class="btn"
+                                    >Github repo</a
+                                >
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <h2 class="card-title">Blog Site</h2>
+                            <p class="text-muted">
+                                This is a personal blog site I created using
+                                Next.js. It uses only Next.js and Sass as
+                                dependencies. This project was created without
+                                an overarching guide or tutorial. Utilized:
+                                Next.js, SASS
+                            </p>
+                            <div class="text-right">
+                                <!-- text-right = text-align: right -->
+                                <a
+                                    href="https://barron-blog.vercel.app"
+                                    class="btn"
+                                    >See it in action!</a
+                                >
+                                <a
+                                    href="https://github.com/bmansk8/barron-blog"
+                                    class="btn"
+                                    >Github repo</a
+                                >
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <h2 class="card-title">2FA</h2>
+                            <p class="text-muted">
+                                This Is a simple two factor auth demo. Uses
+                                hashing and mfa chrome extension. requires
+                                postman to test. Utilized: express,
+                                node-json-db, speakeasy, uuid
+                            </p>
+                            <div class="text-right">
+                                <!-- text-right = text-align: right -->
+                                <a
+                                    href="https://github.com/bmansk8/2fa"
+                                    class="btn"
+                                    >Github repo</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- list of education -->
+                <div
+                    class="content"
+                    style="margin-top: 75px"
+                    x-data="{ open: false}"
+                >
+                    <h2 class="content-title">
+                        Education
+                        <button aria-label="education" class="btn" type="button" @click="open = true">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </h2>
+                    <div
+                        class="row"
+                        x-show.transition.duration.700ms.scale.0="open"
+                        @click.away="open = false"
+                    >
+                        <div class="col-sm">
+                            <div class="w-400 mw-full">
+                                <!-- w-400 = width: 40rem (400px), mw-full = max-width: 100% -->
+                                <div class="card">
+                                    <h2 class="card-title">
+                                        FreeCodeCamp 2018-2019
+                                    </h2>
+                                    <p class="text-muted">
+                                        Responsive Web Design, Javascript
+                                        Algorithms and Data Structures,
+                                        certifications. Equivalent to 600 hours
+                                        of class time.
+                                    </p>
+
+                                    <div class="text-right">
+                                        <!-- text-right = text-align: right -->
+                                        <a
+                                            href="https://www.freecodecamp.org/bmansk8"
+                                            class="btn"
+                                            >Verify</a
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm">
+                            <div class="w-400 mw-full">
+                                <!-- w-400 = width: 40rem (400px), mw-full = max-width: 100% -->
+                                <div class="card">
+                                    <h2 class="card-title">
+                                        Pluralsight 2019-2020
+                                    </h2>
+                                    <p class="text-muted">
+                                        Completed Associate Level Aws, RESTful
+                                        Web Services, and Fullstack Web Apps.
+                                        Scored in the 48th percentile in html
+                                        and the 54th percentile in javascript
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Music -->
+                <div
+                    class="content"
+                    style="margin-top: 75px"
+                    x-data="{ open: false}"
+                >
+                    <h2 class="content-title">
+                        Music
+                        <button aria-label="music" class="btn" type="button" @click="open = true">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </h2>
+                    <div
+                        class="row"
+                        x-show.transition.duration.700ms.scale.0="open"
+                        @click.away="open = false"
+                    >
+                        <div class="col-sm">
+                            <div class="w-400 mw-full">
+                                <!-- w-400 = width: 40rem (400px), mw-full = max-width: 100% -->
+                                <div class="card">
+                                    <h2 class="card-title">My E.P</h2>
+                                    <iframe
+                                        src="https://open.spotify.com/embed/album/134CKQNMpE7uQhHrcx6zbn"
+                                        width="280"
+                                        height="360"
+                                        frameborder="0"
+                                        allowtransparency="true"
+                                        allow="encrypted-media"
+                                    ></iframe>
+                                    <p class="text-muted">
+                                        This is my latest E.P, A wild Goose
+                                        Chase! Go ahead and give it a listen and
+                                        check me out on spotify!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm">
+                            <div class="w-400 mw-full">
+                                <!-- w-400 = width: 40rem (400px), mw-full = max-width: 100% -->
+                                <div class="card">
+                                    <h2 class="card-title">
+                                        Preffer a different platform?
+                                    </h2>
+                                    <p class="text-muted">
+                                        That's ok simply click below and check
+                                        if I'm on one of your preffered
+                                        platforms.
+                                    </p>
+
+                                    <div class="text-right">
+                                        <!-- text-right = text-align: right -->
+                                        <a
+                                            href="https://distrokid.com/hyperfollow/barronbrock/a-wild-goose-chase"
+                                            class="btn"
+                                            >All my platforms</a
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <footer class="text-center">
+                    <p>
+                        You can also look at my
+                        <a
+                            href="https://docs.google.com/document/d/1SCqaeHP5KRrGy_gzl8-6bg6pFcbhmL4TYC3OOKLsL40/edit?usp=sharing"
+                            class="hyperlink"
+                            >resume</a
+                        >
+                        in pdf form or check out the
+                        <a href="#" class="hyperlink">github repo</a> for this
+                        site.
+                    </p>
+                    <p>
+                        Created by Barron V Brock with Alpine.js, Halfmoon, and
+                        Fontawesome Icons
+                    </p>
+                </footer>
+            </div>
+        </div>
+
+        <!-- scripts -->
+        <script src="/js/alpine.js"></script>
+        <script src="/js/halfmoon.min.js"></script>
+        <script src="/js/all.js"></script>
+        <!-- fontawesome -->
+        <script type="text/javascript">
+            // Dark mode toggle
+            function toggle() {
+                halfmoon.toggleDarkMode()
+            }
+        </script>
+    </body>
+</html>
+
+<!--
+    resume
+    https://docs.google.com/document/d/1SCqaeHP5KRrGy_gzl8-6bg6pFcbhmL4TYC3OOKLsL40/edit?usp=sharing
+-->
