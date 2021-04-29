@@ -169,7 +169,7 @@
                     </h2>
                     <!-- transitions using alpine's defaults. These can be much more configurable but this suits my needs -->
                     <div
-                        x-show.transition.duration.700ms.scale.0="open"
+                        x-show.transition.duration.700ms.origin.left="open"
                         @click.away="open = false"
                     >
                         <div class="card">
@@ -254,7 +254,7 @@
                     </h2>
                     <div
                         class="row"
-                        x-show.transition.duration.700ms.scale.0="open"
+                        x-show.transition.duration.700ms.origin.left="open"
                         @click.away="open = false"
                     >
                         <div class="col-sm">
@@ -315,7 +315,7 @@
                     </h2>
                     <div
                         class="row"
-                        x-show.transition.duration.700ms.scale.0="open"
+                        x-show.transition.duration.700ms.origin.left="open"
                         @click.away="open = false"
                     >
                         <div class="col-sm">
